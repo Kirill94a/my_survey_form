@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8">
+  <head>
+    <title>
+      My Survey Form
+    </title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Eczar" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1 id="title">My survey form</h1>
+    </header>
+    <p id="description">Tell us about you</p>
+    <form id="survey-form" action="/action_page.php">
+      <label id="name-label" for="name" class="required"> Full name: </label>
+      <input type="text" id="name" placeholder="John Smith" required>
+      <label id="email-label" for="email" class="required"> Email: </label>
+      <input type="email" id="email" placeholder="john@smith.com" required>
+      <label id="number-label" for="number" class="required"> Age: </label>
+      <input type="number" id="number" placeholder="Number" min="1" max="150" required>
+      <label for="gender">Gender: </label>
+      <fieldset id="gender">
+        <div><label><input type="radio" name="gender" value="male" required>Male</label></div>
+        <div><label><input type="radio" name="gender" value="female" required>Female</label></div>
+        <div><label><input type="radio" name="gender" value="other" required>Other</label></div>
+      </fieldset>
+      <label for="dropdown" class="required"> Which best describes you? </label>
+      <select id="dropdown" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+        <option value="researcher">Researcher</option>
+        <option value="administrator">Administrator</option>
+        <option value="other">Other</option>
+      </select>
+      <label for="skills">What are your skills in web development?</label>
+      <fieldset id="skills">
+        <div><label><input type="checkbox" name="skills" value="html_css">HTML/CSS</label></div>
+        <div><label><input type="checkbox" name="skills" value="javascript_jquery">JavaScript/jQuery</label></div>
+        <div><label><input type="checkbox" name="skills" value="javascript_frameworks">JavaScript Frameworks</label></div>
+        <div><label><input type="checkbox" name="skills" value="css_preprocessing">CSS Preprocessing</label></div>
+        <div><label><input type="checkbox" name="skills" value="version_control_git">Version Control/Git</label></div>
+        <div><label><input type="checkbox" name="skills" value="responsive_design">Responsive Design</label></div>
+        <div><label><input type="checkbox" name="skills" value="testing_debugging">Testing/Debugging</label></div>
+        <div><label><input type="checkbox" name="skills" value="browser_developer_tools">Browser Developer Tools</label></div>
+        <div><label><input type="checkbox" name="skills" value="building_and_automation_tools_web_performance">Building and Automation Tools/Web Performance</label></div>
+        <div><label><input type="checkbox" name="skills" value="command_line">Command Line</label></div>
+      </fieldset>
+      <label for="comment">Your comment: </label>
+      <textarea id="comment" placeholder="Enter your comment" maxlength="1000"></textarea>
+      <input type="submit" id="submit" value="Submit">
+    </form>
+  </body>
+</html>
